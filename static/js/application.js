@@ -1,7 +1,7 @@
 $(function() {
     $('a#run').bind('click', function() {
       $.getJSON($SCRIPT_ROOT + '/_interpret', {
-        statement: $('textarea[name="input"]').val()
+        statement: editor.getSession().getValue()
       }, function(data) {
         $("#console").text(data.result);
       });

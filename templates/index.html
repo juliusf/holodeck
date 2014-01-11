@@ -6,14 +6,21 @@
     </div>
 
       <h3>Non-responsive grid system</h3>
+      <a href="#" class="btn btn-success btn-large" id=run style="margin-bottom:10px"><i class="icon-white icon-play"></i> Run</a>
       <div class="row">
         <div class="col-md-6">
-            <textarea id="input" style="height: 600px;" name="input"></textarea>
+                <div id="editor" style="height: 600px"></div>
         </div>
         <div class="col-md-6">
             <textarea id="console" style="height: 600px;"></textarea>
         </div>
       </div>
-      <a href="#" class="btn btn-success btn-large"  id=run><i class="icon-white icon-play"></i> Run</a>
+
+      <script src="/static/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+      <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.getSession().setMode("ace/mode/scheme");
+      </script>
 
 {% endblock %}
