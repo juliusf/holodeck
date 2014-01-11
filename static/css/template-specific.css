@@ -22,7 +22,7 @@ body {
 #console{
   color: white;
   width: 100%;
-  background-color: black;
+  background-color: #272822;
   resize: none;
 }
 
@@ -33,6 +33,13 @@ body {
   resize: none;
 }
 #editor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#directWindow {
   position: absolute;
   top: 0;
   right: 0;

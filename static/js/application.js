@@ -3,7 +3,10 @@ $(function() {
       $.getJSON($SCRIPT_ROOT + '/_interpret', {
         statement: editor.getSession().getValue()
       }, function(data) {
-        $("#console").text(data.result);
+        existing =  $("#console").text();
+        existing += ">";
+        existing += data.result + "\n";
+        $("#console").text(existing);
       });
       return false;
     });
