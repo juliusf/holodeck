@@ -1,2 +1,19 @@
 {% extends 'base.html' %}
-{% block body %}<h1>It Works!</h1>{% endblock %}
+{% block body %}
+    <div class="page-header">
+        <h1>Holodeck Scheme REPL</h1>
+        <p class="lead">Hello! I'm a flask application server running a scheme interpreter which has been written in python.</p>
+    </div>
+
+      <h3>Non-responsive grid system</h3>
+      <div class="row">
+        <div class="col-md-6">
+            <textarea id="input" style="height: 600px;"></textarea>
+        </div>
+        <div class="col-md-6">
+            <textarea id="console" style="height: 600px;"></textarea>
+        </div>
+      </div>
+
+
+{% endblock %}
